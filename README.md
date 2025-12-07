@@ -1,89 +1,63 @@
-Go Rental — Car Rental Management API
+# Go Rental — Car Rental Management API
 
-A simple and scalable Node.js + TypeScript backend for managing car rentals, users, bookings, and vehicle data.
-Built with Express, PostgreSQL, JWT Authentication, and follows clean modular structure.
+A simple, scalable, and well-structured **Node.js + TypeScript** backend for managing car rentals, users, bookings, and vehicle inventory.  
+Built with **Express**, **PostgreSQL**, **JWT authentication**, and following clean, modular architecture principles.
 
-🔗 Live URL: Add your deployed link here (e.g., Render, Railway, Vercel serverless, etc.)
-📦 Tech Stack: Node.js, Express, TypeScript, PostgreSQL
+🔗 **Live URL**: _Add your deployed link here (e.g., Render, Railway, Fly.io, etc.)_
 
-🚀 Features
-🔐 Authentication & Authorization
+📦 **Tech Stack**: Node.js • Express • TypeScript • PostgreSQL • JWT • bcrypt • dayjs
 
-User registration (Customer & Admin roles)
+## 🚀 Features
 
-Secure login using JWT
+### 🔐 Authentication & Authorization
+- User registration (Customer & Admin roles)
+- Secure login with JWT
+- Password hashing using **bcrypt**
+- Role-based access control
 
-Password hashing with bcrypt
+### 🚗 Vehicle Management (Admin only)
+- Add, update, delete vehicles
+- Retrieve all vehicles or filter by:
+  - Type (sedan, SUV, etc.)
+  - Availability
+  - Price range
+  - Features
 
-🚗 Vehicle Management
+### 📅 Booking Management
+- Create rental bookings
+- Validation:
+  - `rent_start_date` < `rent_end_date`
+  - No bookings in the past
+  - Prevent overlapping bookings for the same vehicle
+- Edit or cancel bookings **only before** the rental start date
 
-Add, update, delete vehicles (Admin)
+### 👤 Customer Features
+- View personal active and past bookings
+- Update or cancel upcoming bookings
+- View rental history
 
-Get available vehicles
+### 🛠 Additional Highlights
+- Full **TypeScript** support for type safety
+- PostgreSQL with **pg** (node-postgres)
+- Date handling using **dayjs**
+- Environment variables via **dotenv**
+- Clean modular structure (controllers, routes, services, middlewares)
 
-Filter vehicles by type, availability, price, etc.
+## 🛠 Technology Stack
 
-📅 Booking Management
+| Category         | Technologies                              |
+|------------------|-------------------------------------------|
+| Language         | TypeScript                                |
+| Runtime          | Node.js                                   |
+| Framework        | Express.js                                |
+| Database         | PostgreSQL (`pg`)                         |
+| Authentication   | JWT, bcrypt                               |
+| Date Library     | dayjs                                     |
+| Dev Tools        | ts-node, nodemon, eslint, prettier        |
 
-Create new rental bookings
+## ⚙️ Setup & Installation
 
-Validate date ranges (start < end)
-
-Prevent past date bookings
-
-Only future bookings can be edited/cancelled
-
-👤 Customer Features
-
-View personal bookings
-
-Update booking status (before rent_start_date)
-
-View rental history
-
-📦 Additional
-
-TypeScript for type safety
-
-PostgreSQL database connection using pg
-
-Date handling with dayjs
-
-Environment variable support via dotenv
-
-🛠 Technology Stack
-Category	Technologies
-Language	TypeScript
-Runtime	Node.js
-Framework	Express.js
-Database	PostgreSQL (pg)
-Auth	JWT, bcrypt
-Tools	ts-node, nodemon
-Date Library	dayjs
-
-
-
-⚙️ Setup & Installation
-1. Clone the Repository
-git clone <your-repo-url>
-cd <project-folder>
-
-2. Install Dependencies
-npm install
-
-3. Create a .env File
-
-Include:
-
-PORT=5000
-DATABASE_URL=postgresql://username:password@localhost:5432/your_db
-JWT_SECRET=your_secret_key
-
-4. Run in Development Mode
-npm run dev
-
-5. Build for Production
-npm run build
-
-6. Start Production Server
-npm start
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/go-rental-api.git
+cd go-rental-api

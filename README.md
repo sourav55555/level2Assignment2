@@ -3,7 +3,9 @@
 A simple, scalable, **Node.js + TypeScript** backend for managing car rentals, users, bookings, and vehicle inventory.  
 Built with **Express**, **PostgreSQL**, **JWT authentication**, and following modular structure.
 
-🔗 **Live URL**: _Add your deployed link here (e.g., Render, Railway, Fly.io, etc.)_
+🔗 **Live URL**: (https://level2assignment2.onrender.com/)
+🔗 **Repo URL**: (https://github.com/sourav55555/level2Assignment2.git)
+
 
 📦 **Tech Stack**: Node.js • Express • TypeScript • PostgreSQL • JWT • bcrypt • dayjs
 

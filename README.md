@@ -1,7 +1,7 @@
 # Go Rental — Car Rental Management API
 
-A simple, scalable, and well-structured **Node.js + TypeScript** backend for managing car rentals, users, bookings, and vehicle inventory.  
-Built with **Express**, **PostgreSQL**, **JWT authentication**, and following clean, modular architecture principles.
+A simple, scalable, **Node.js + TypeScript** backend for managing car rentals, users, bookings, and vehicle inventory.  
+Built with **Express**, **PostgreSQL**, **JWT authentication**, and following modular structure.
 
 🔗 **Live URL**: _Add your deployed link here (e.g., Render, Railway, Fly.io, etc.)_
 
@@ -18,23 +18,21 @@ Built with **Express**, **PostgreSQL**, **JWT authentication**, and following cl
 ### 🚗 Vehicle Management (Admin only)
 - Add, update, delete vehicles
 - Retrieve all vehicles or filter by:
-  - Type (sedan, SUV, etc.)
+  - Type (car, SUV, etc.)
   - Availability
-  - Price range
+  - Daily range
   - Features
 
 ### 📅 Booking Management
 - Create rental bookings
 - Validation:
   - `rent_start_date` < `rent_end_date`
-  - No bookings in the past
   - Prevent overlapping bookings for the same vehicle
 - Edit or cancel bookings **only before** the rental start date
 
 ### 👤 Customer Features
 - View personal active and past bookings
 - Update or cancel upcoming bookings
-- View rental history
 
 ### 🛠 Additional Highlights
 - Full **TypeScript** support for type safety
@@ -59,5 +57,25 @@ Built with **Express**, **PostgreSQL**, **JWT authentication**, and following cl
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/go-rental-api.git
+git clone https://github.com/sourav55555/level2Assignment2.git
 cd go-rental-api
+
+
+## Create a .env File
+
+Add the following:
+CONNECTION_STRING = 
+PORT =
+SECRET =
+
+## Install Dependencies
+npm install
+
+##Run in Development Mode
+npm run dev
+
+##Build for Production
+npm run build
+
+##Start Production Server
+npm start
